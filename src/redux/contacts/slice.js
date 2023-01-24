@@ -13,15 +13,4 @@ export const contactsSlice = createSlice({
   },
 });
 
-export const filterSlice = createSlice({
-  name: 'filter',
-  initialState: { query: '' },
-  reducers: {
-    getQuery(state, { payload }) {
-      state.query = payload.toLowerCase();
-    },
-  },
-});
-
 export const { add, deleteItem } = contactsSlice.actions;
-export const { getQuery } = filterSlice.actions;
